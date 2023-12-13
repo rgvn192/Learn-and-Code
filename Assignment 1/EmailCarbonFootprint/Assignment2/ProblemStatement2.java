@@ -25,11 +25,13 @@ class Product
         return price;
     }
  
-    public int getQuantity() {
+    public int getQuantity() 
+    {
         return quantity;
     }
  
-    public void setQuantity(int newQuantity) {
+    public void setQuantity(int newQuantity) 
+    {
         this.quantity = newQuantity;
     }
 }
@@ -69,9 +71,9 @@ public class Program
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
  
-            int userChoice = scanner.nextInt();
+            int selection = scanner.nextInt();
  
-            switch (userChoice)
+            switch (selection)
             {
                 case 1:
                     System.out.print("Enter product name: ");
@@ -90,7 +92,8 @@ public class Program
                 case 2:
                     System.out.println("\nCurrent Inventory:");
                     List<Product> products = inventoryManager.getInventory();
-                    for (Product product : products) {
+                    for (Product product : products) 
+                    {
                         System.out.println("Name: " + product.getName() +
                                 ", Price: $" + product.getPrice() +
                                 ", Quantity: " + product.getQuantity());
